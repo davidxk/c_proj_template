@@ -1,0 +1,16 @@
+## List of subsystems
+##### Note: This file can be automatically maintained #####
+subsystem=
+
+## List of Source files
+sources+=
+
+## The part below does not change across projects!
+## ------------------~~ Dividing Line ~~--------------------
+## Const Path Variable
+src_path=$(proj_path)/source
+sub_path=$(addprefix $(src_path)/, $(subsystem))
+
+## Implicit Variable
+VPATH+=$(src_path) $(sub_path)
+CXXFLAGS+=-I $(src_path) 
